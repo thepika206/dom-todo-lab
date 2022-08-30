@@ -38,7 +38,9 @@ function newTask(){
 function reset(){
   ////clears any value in the input and reinit the list
   resetInput()
-  resetList()
+  oldtasks_DOM = document.querySelectorAll('.listItem')
+  console.log(oldtasks_DOM)
+  //! here's where I left off
 }
 
 function deleteTask(event){
@@ -51,9 +53,3 @@ function resetInput(){
   input_DOM.value = ''
 }
 
-function resetList(){
-  
-  oldtasks_DOM = document.querySelectorAll('.listItem')
-  console.log(oldtasks_DOM)
-  
-}
