@@ -1,12 +1,16 @@
-//* Initial DOM selectors and event listeners
+//* text input box
 input_DOM = document.querySelector('#task-input')
-submitBtn_DOM = document.querySelector('#submit-button')
-resetBtn_DOM = document.querySelector('#reset-button')
-todoListContainer_DOM = document.querySelector('#todo-list--container') //wrapper for dynamically created list
+
+//* add task button
+document.querySelector('#submit-button').addEventListener('click', newTask)
+
+//* reset list button
+document.querySelector('#reset-button').addEventListener('click', reset)
+
+//* unorder list for tasks to be added to
 todoList_DOM = document.querySelector('#todo-list')
 
-submitBtn_DOM.addEventListener('click', newTask)
-resetBtn_DOM.addEventListener('click', reset)
+//* listener over the whole list for deleting tasks
 todoList_DOM.addEventListener('click', deleteTask)
 
 //* action functions
