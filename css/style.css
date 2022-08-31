@@ -7,13 +7,29 @@ body {
   justify-content: center; */
 }
 
-#todo-list {
-  /* border: 1px solid white; */
-  text-align: left;
+div#todo-list--container {
+  margin-top: 8px;
+  background-color: white;
   width: 30%;
-  margin: auto;
+  margin-right: auto;
+  margin-left: auto;
+  border-radius: 15px;
+  padding-top: 16px;
+}
+
+ul#todo-list {
+  text-align: left;
+  color: black;
+  
 }
 
 .input:hover {
   cursor: pointer;
+}
+
+ul#todo-list > li:hover {
+  cursor:pointer;
+  text-decoration: line-through;
+  color: gray;
+
 }
