@@ -3,26 +3,35 @@
 
 /*-------------------------------- Variables --------------------------------*/
 
-//* text input box
-input_DOM = document.querySelector('#task-input')
 
 /*------------------------ Cached Element References ------------------------*/
+
+//* text input box for the task name
+input_DOM = document.querySelector('#task-input')
+
+//* submit btn near the input
+submitBtn_DOM = document.querySelector('#submit-button')
+
+//* reset btn near the submit button
+resetBtn_DOM = document.querySelector('#reset-button')
 
 //* unorder list for tasks to be added to
 todoList_DOM = document.querySelector('#todo-list')
 
+
 /*----------------------------- Event Listeners -----------------------------*/
 
-//* add task button
-document.querySelector('#submit-button').addEventListener('click', newTask)
+//* click add task button to add a task with the value in the input
+submitBtn_DOM.addEventListener('click', newTask)
 
-//* reset list button
-document.querySelector('#reset-button').addEventListener('click', reset)
+//* click reset list button to clear the list
+resetBtn_DOM.addEventListener('click', reset)
 
-//* listener over the whole list for deleting tasks
+//* clicking on a li in the ul to delete tasks
 todoList_DOM.addEventListener('click', deleteTask)
 
 /*-------------------------------- Functions --------------------------------*/
+
 //* action functions
 function newTask(){
   /* create new li, set newTask text to value of input, add newTask to the todoList, clear the value in the input */
